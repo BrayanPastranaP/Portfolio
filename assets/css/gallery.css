@@ -1,0 +1,108 @@
+.gallery__container {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.gallery__container form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.gallery__container .barra-busqueda {
+  width: 70%;
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  padding: 0 20px;
+  border-radius: 100px;
+  border: none;
+  text-align: left;
+  padding-left: 6rem;
+  font-size: 16px;
+  background-image: url(../img/gallery/icon__search.png);
+  background-size: 1.7rem;
+  background-position: 2rem;
+  background-repeat: no-repeat;
+}
+
+.gallery__container .categorias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin:20px 0;
+}
+
+.gallery__container .categorias a {
+  color: #9b9b9b;
+  margin: 0; 
+  padding:7px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.gallery__container .categorias a.activo {
+  color: #000;
+}
+
+/* ------------------------- */
+/* grid__gallery */
+/* ------------------------- */
+
+.gallery__container .grid__gallery {
+  position: relative;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s linear 1s;
+}
+
+.gallery__container .grid__gallery.imagenes-cargadas {
+  opacity: 1;
+}
+
+.gallery__container .grid__gallery .item {
+  position: absolute;
+  display: block;
+  padding: 0;
+  margin: 10px;
+  width: calc(33.333333% - 20px);
+}
+
+.gallery__container .grid__gallery .item-contenido {
+  position: relative;
+}
+
+.gallery__container .grid__gallery .item img {
+  width: 100%;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+/* ------------------------- */
+/* Mediaqueries */
+/* ------------------------- */
+@media screen and (max-width: 700px) {
+  .gallery__container .grid__gallery .item {
+    width: calc(50% - 20px);
+  }
+
+  .gallery__container .barra-busqueda {
+    width: 100%;
+  }
+}
+
+.gallery__container .slide-container {
+  position: relative;
+  max-width: 100%;
+}
+.gallery__container .slide-content {
+  overflow: hidden;
+}
+
+.gallery__container .swiper-wrapper a {
+  text-align: center;
+}
